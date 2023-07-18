@@ -17,12 +17,10 @@ Router::action('/user/login', Auth::class, 'login');
 Router::action('/user', User::class, 'user');
 Router::action('/posts', User::class, 'posts');
 Router::action('/add', User::class, 'add');
-//Router::action('/mail', User::class, 'mail');
 
 if (!empty($_GET)){
     Router::action('/post?id=' . $_GET['id'], User::class, 'post');
 }
 Router::action('/user/exit', User::class, 'exit');
-//Router::action('/user/create', User::class, 'create');
 
 Router::enable();
