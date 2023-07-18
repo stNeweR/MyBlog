@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+    font-family: "JetBrains Mono NL";
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+header{
+    display: flex;
+    margin: 20px 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+h4 {
+    margin-top: 5px;
+    padding-bottom: 5px ;
+    font-size: 14px;
+}
+h1 {
+    font-size: 24px;
+}
+form{
+    max-width: 500px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+}
+input {
+    border: none;
+    padding: 5px 10px;
+    border-bottom: solid 2px #848484;
+    margin-bottom: 20px;
+}
+button {
+    background-color: transparent;
+    border: 2px solid #ffd471;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+a {
+    margin-right: 10px;
+}
+.container {
+    max-width: 600px;
+    margin: 60px auto;
+}
+.user {
+    display: flex;
+    align-items: center;
+}
+.posturl{
+    margin-right: 30px;
+}
+.username {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+}
+.userinfo {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.userabout {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    gap: 30px;
+}
+.postsinfo {
+    border: solid #b2b2b2 1px;
+    margin: 50px auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.avatar {
+    width: 200px;
+}
+.author {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.post {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+.postimg {
+    width: 300px;
+}
+.posttitle {
+    border-bottom: solid 1px #adadad;
+    margin-bottom: 30px;
+}
+.userexit {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.msg {
+    margin: -30px auto;
+    padding: 10px;
+    max-width: 360px;
+    text-align: center;
+    border: 2px solid #ffd347;
+}
+.new {
+    border: none;
+}
+.create {
+    display: block;
+    font-size: 24px;
+    margin: 20px auto;
+    text-align: center;
+}
