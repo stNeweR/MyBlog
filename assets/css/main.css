@@ -37,6 +37,10 @@ button {
     padding: 10px 20px;
     cursor: pointer;
 }
+textarea {
+    resize: none;
+    padding: 10px;
+}
 a {
     margin-right: 10px;
 }
@@ -117,4 +121,10 @@ a {
     font-size: 24px;
     margin: 20px auto;
     text-align: center;
+}
+.smtext {
+    height: 50px;
+}
+.text {
+    height: 300px;
 }

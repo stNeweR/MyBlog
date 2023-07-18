@@ -52,7 +52,6 @@ class User
             require 'views/pages/posts.php';
         }
     }
-
     public function post(){
         $id = $_GET['id'];
         $db = $this->db->query("SELECT * FROM posts WHERE `id` = :id", ['id' => $id]);
@@ -75,16 +74,20 @@ class User
         $file = $_FILES['file'];
         $file['name'] = $title;
         $name = $file['name'];
-//        var_dump($file);
         $path = $_SERVER['DOCUMENT_ROOT'] . "/assets/post/" . $name;
-//      INSERT INTO `posts` (`id`, `title`, `text`, `small text`, `img`, `author`, `time`)
-//      VALUES (NULL, 'dslkcmsx', 'jedsklmcdslz', 'dsjkl', 'lsdkmzc', 'ekjs oiejds', '16.07.2023');
         $db = $this->db->query("INSERT INTO `posts` (`id`, `title`, `text`, `small text`, `img`, `author`, `time`
 ) VALUES (NULL, :title, :text, :smtext, :img, :author, :time)",
             ['title' => $title, 'text' => $text, 'smtext' => $smtext, 'img' => $name, 'author' => $author, 'time' => $date]);
         var_dump($_POST);
         move_uploaded_file($file['tmp_name'], $path);
         header("Location: /user");
+    }
+
+    public function update() {
+        $id = $_GET['id'];
+        $db = $this->db->query("SELECT * FROM `posts` WHERE `id` = :id", ['id' => $id]);
+        $db = $db[0];
+        require_once './views/pages/update.php';
     }
 
     public function exit() {
